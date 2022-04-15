@@ -21,9 +21,7 @@ const getUser = (req, res) => {
   const user = users.find((u) => u.id == userId);
 
   if (!user) {
-    return res
-      .status(400)
-      .json({ success: false, message: "user not found" });
+    return res.status(400).json({ success: false, message: "user not found" });
   }
 
   res.status(200).json({ success: true, data: user });
@@ -41,7 +39,7 @@ const createUser = (req, res) => {
 };
 
 module.exports = {
-    getAllUsers,
-    getUser,
-    createUser,
+  getAllUsers,
+  getUser,
+  createUser,
 };
